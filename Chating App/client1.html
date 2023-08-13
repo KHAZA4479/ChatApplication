@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Chat - Client 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="msg.ico">
+</head>
+<body>
+    <div class="chat">
+        <h1>Chat - Client 1</h1>
+        <div id="chat-box" class="chat-box"></div>
+        <input type="text" id="message" class="message-input" placeholder="Type your message">
+        <button id="send" class="send-button">Send</button>
+    </div>
+
+    <script>
+        const chatBox = document.getElementById('chat-box');
+        const messageInput = document.getElementById('message');
+        const sendButton = document.getElementById('send');
+
+        const ws = new WebSocket('ws://localhost:5000');
+
+        ws.addEventListener('message', (event) => {
+            const message = event.data;
+            chatBox.innerHTML += `<p>${message}</p>`;
+        });
+
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value;
+            ws.send(message);
+            messageInput.value = '';
+        });
+    </script>
+</body>
+</html>
