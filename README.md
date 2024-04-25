@@ -40,3 +40,8 @@ Fork the repository.
 Create a new branch for your feature or bug fix.
 Make your changes and commit them.
 Push your changes to your fork and submit a pull request.
+
+# Screenshots
+![Screenshot 2024-04-25 224643](https://github.com/KHAZA4479/ChatApplication/assets/138356894/3ca6c1e4-0884-463c-818b-dc16590383d3)
+![Screenshot 2024-04-25 225006](https://github.com/KHAZA4479/ChatApplication/assets/138356894/f4e1584d-566d-4613-b5f8-e9e352e962da)
+
